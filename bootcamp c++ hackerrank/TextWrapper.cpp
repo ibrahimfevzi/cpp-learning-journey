@@ -99,20 +99,6 @@ string rtrim(const string &str) {
 }
 
 
-/*output :
- text
-rapp
-ngis
-un 
-
-ama aslında şöyle olmalıydı:
-text
-wrap
-ping
-isfu
-n
-*/
-
 
 
 
