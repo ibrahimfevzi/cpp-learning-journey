@@ -57,3 +57,6 @@ int main()
 
     return 0;
 }
+
+
+// hatalı sonuç veriyor
