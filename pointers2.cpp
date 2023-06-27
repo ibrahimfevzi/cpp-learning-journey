@@ -26,5 +26,11 @@ int main()
 // p pointer'ı a dizisinin 2. elemanını gösteriyor.
 // z değişkeni ekrana yazdırıldı.
 
+// a dizisi
+// 0 1 4 9 16
 
+// p pointer'ı
+// 0 1 4 9 16
 
+// z değişkeni
+// 5 5 5 5 5
