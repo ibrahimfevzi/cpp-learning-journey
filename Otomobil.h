@@ -10,6 +10,6 @@ class Otomobil
      string model;
      int beygirGucu;
 
-     void ruhsatBilgileriGoster()
-     
+     void ruhsatBilgileriGoster();
+     Otomobil(string _renk, string _model, int _beygirGucu);
 };

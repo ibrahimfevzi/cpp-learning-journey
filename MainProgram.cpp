@@ -19,15 +19,9 @@ int main()
 
     // return 0;
 
-    Otomobil otomobil1, otomobil2;
+    Otomobil otomobil1("siyah", "Mercedes", 200);
+    Otomobil otomobil2("beyaz", "BMW", 150);
 
-    otomobil1.renk = "siyah";
-    otomobil1.model = "Mercedes";
-    otomobil1.beygirGucu = 200;
-    
-    otomobil2.renk = "beyaz";
-    otomobil2.model = "BMW";
-    otomobil2.beygirGucu = 150;
 
 
     otomobil1.ruhsatBilgileriGoster();
