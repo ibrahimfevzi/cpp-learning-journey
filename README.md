@@ -1,2 +1,5 @@
 # cpp-learning-journey
-C++ programlama becerilerimi geliştirmek amacıyla yapılmış çalışmalar..
+
+```
+Contains my studies made to improve my C++ programming skills.
+```
