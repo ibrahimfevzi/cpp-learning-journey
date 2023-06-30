@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Otomobil.h"
+#include "Hayvan.h"
 
 
 
@@ -19,16 +20,22 @@ int main()
 
     // return 0;
 
-    Otomobil otomobil1("siyah", "Mercedes", 200);
-    Otomobil otomobil2("beyaz", "BMW", 150);
+    // Otomobil otomobil1("siyah", "Mercedes", 200);
+    // Otomobil otomobil2("beyaz", "BMW", 150);
 
 
 
-    otomobil1.ruhsatBilgileriGoster();
-    cout << endl << endl;  
-    otomobil2.ruhsatBilgileriGoster();
+    // otomobil1.ruhsatBilgileriGoster();
+    // cout << endl << endl;  
+    // otomobil2.ruhsatBilgileriGoster();
 
+    // return 0;
 
-    
-    ;
+    Hayvan h("karabas");
+    h.beslen();
+    h.uyu();
+
+    cout << endl << endl;
+    return 0;
+
 }
