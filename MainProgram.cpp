@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Otomobil.h"
 #include "Hayvan.h"
+#include "Kedi.h"
 
 
 
@@ -31,11 +32,18 @@ int main()
 
     // return 0;
 
-    Hayvan h("karabas");
-    h.beslen();
-    h.uyu();
+    // Hayvan h("karabas");
+    // h.beslen();
+    // h.uyu();
+
+    // cout << endl << endl;
+    // return 0;
+
+    Kedi tekir("Tekir");
+    tekir.beslen();
+    tekir.uyu(); 
+    tekir.fareYakala();
 
     cout << endl << endl;
     return 0;
-
 }
