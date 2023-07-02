@@ -1,6 +1,6 @@
 #include "Kus.h"
 
-// Kedi constructor
+// Kuş constructor
 Kus::Kus(string ad) : Hayvan(ad){
 
     // Ek özellikler burada tanımlanabilir.

@@ -9,6 +9,7 @@
 
 using namespace std;
 
+
 int main()
 {
 
@@ -41,21 +42,31 @@ int main()
     // cout << endl << endl;
     // return 0;
 
-    Kedi tekir("Tekir");
-    tekir.beslen();
-    tekir.uyu(); 
-    tekir.fareYakala();
+    // Kedi tekir("Tekir");
+    // tekir.beslen();
+    // tekir.uyu(); 
+    // tekir.fareYakala();
 
     Kopek karabas("Karabas");
     karabas.beslen();
     karabas.uyu();
     karabas.havla();
 
+     Kopek kopek2("Tommy");
+     Kopek kopek3("Vlad");
 
-    Kus marti("Marti");
-    marti.beslen();
-    marti.uyu();
-    marti.uc();
+     Kopek *kp = new Kopek("John");
+
+     cout << "Kopek sayisi : " << Kopek:: getKopekSayisi << endl << endl;
+
+     delete kp;
+
+    cout << "Kopek sayisi : " << Kopek:: getKopekSayisi << endl << endl;
+
+    // Kus marti("Marti");
+    // marti.beslen();
+    // marti.uyu();
+    // marti.uc();
 
 
     cout << endl << endl;
