@@ -12,6 +12,6 @@ public:
     void setIsim(string ad);
     string getIsim();
 
-private:
+private: //private yerine protected olursa alt sınıflar erişebilir.
     string isim;
 };
