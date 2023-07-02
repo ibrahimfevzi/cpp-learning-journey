@@ -2,6 +2,8 @@
 #include "Otomobil.h"
 #include "Hayvan.h"
 #include "Kedi.h"
+#include "Kopek.h"
+#include "Kus.h"
 
 
 
@@ -43,6 +45,18 @@ int main()
     tekir.beslen();
     tekir.uyu(); 
     tekir.fareYakala();
+
+    Kopek karabas("Karabas");
+    karabas.beslen();
+    karabas.uyu();
+    karabas.havla();
+
+
+    Kus marti("Marti");
+    marti.beslen();
+    marti.uyu();
+    marti.uc();
+
 
     cout << endl << endl;
     return 0;
