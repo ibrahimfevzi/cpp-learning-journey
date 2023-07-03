@@ -9,7 +9,7 @@ Kopek::Kopek(string ad) : Hayvan(ad){
     kopekSayisi++;
 };
 
-// Kopek destructor
+// Kopek destructor 
 Kopek::~Kopek(){
     kopekSayisi--;
 };
