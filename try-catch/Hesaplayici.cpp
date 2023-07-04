@@ -27,6 +27,8 @@ catch(int hataNo)
     return 0;
 }
 
+//Notlar
+
 
 
 
