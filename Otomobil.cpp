@@ -14,5 +14,5 @@ void Otomobil::ruhsatBilgileriGoster()
     cout << "Beygir Gucu : " << beygirGucu << endl;
 }
 
-
+//
 
