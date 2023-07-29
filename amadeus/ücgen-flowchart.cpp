@@ -18,7 +18,7 @@ int main() {
     cin >> a >> b >> c;
 
     if (a + b > c && b + c > a && c + a > b) {
-        if (a == b && b == c) {
+        if (a == b && b == c ||a == b && c == a || b == c && c == a) {
             cout << "Equilateral triangle" << endl;
         }
         else if (a == b || b == c || c == a) {

@@ -181,7 +181,7 @@ Son olarak, sonucu ekrana yazdırıyoruz.
 Bu şekilde, kullanıcıdan alınan poligonun köşe koordinatları ve bir noktanın koordinatları ile, noktanın poligonun içinde mi dışında mı olduğunu sorgulayan bir program oluşturmuş oluyoruz.
 
 
-
+// 
 
 
 
