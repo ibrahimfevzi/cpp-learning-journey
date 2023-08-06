@@ -36,10 +36,10 @@ return true;
 }
 return false;
 }
-´´´
+
 ComputeNextDate: Verilen tarihin bir gün sonraki tarihini hesaplayan fonksiyon.
 
-´´´
+
 CDate ComputeNextDate(CDate date) {
 CDate nextDate = date;
 
