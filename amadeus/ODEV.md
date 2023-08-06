@@ -1,16 +1,18 @@
-´´´
 İlk olarak, CDate struct'ını tanımlayalım:
 
+´´´
 typedef struct {
 int mYear;
 int mMonth;
 int mDay;
 } CDate;
+´´´
 
 Aşağıda, istenilen fonksiyonları ve yardımcı fonksiyonları tanımlayalım:
 
 IsValidDate: Verilen tarihin geçerli bir tarih olup olmadığını kontrol eden fonksiyon.
 
+´´´
 bool IsValidDate(int year, int month, int day) {
 // Year, month, and day should be within valid ranges.
 if (year < 0 || month < 1 || month > 12 || day < 1)
@@ -26,9 +28,11 @@ return false;
     return true;
 
 }
+´´´
 
 IsLeapYear: Verilen yılın artık yıl olup olmadığını kontrol eden fonksiyon.
 
+´´´
 bool IsLeapYear(int year) {
 if (year % 4 == 0) {
 if (year % 100 != 0 || year % 400 == 0)
@@ -36,10 +40,10 @@ return true;
 }
 return false;
 }
-
+´´´
 ComputeNextDate: Verilen tarihin bir gün sonraki tarihini hesaplayan fonksiyon.
 
-
+´´´
 CDate ComputeNextDate(CDate date) {
 CDate nextDate = date;
 
@@ -65,9 +69,11 @@ CDate nextDate = date;
     return nextDate;
 
 }
+´´´
 
 ComputePreviousDate: Verilen tarihin bir gün önceki tarihini hesaplayan fonksiyon.
 
+´´´
 CDate ComputePreviousDate(CDate date) {
 CDate previousDate = date;
 
@@ -95,6 +101,7 @@ CDate previousDate = date;
     return previousDate;
 
 }
+´´´
 
 Şimdi, test case'leri kurgulayalım ve bu fonksiyonları test edelim. Test case'leri oluştururken, aşağıdaki senaryoları dikkate almalıyız:
 
@@ -125,5 +132,3 @@ Artık yılları test etmek, tarih hesaplama işlemleri sırasında şubat ayın
 Otomatik testler, hızlı bir şekilde birden çok tarih kombinasyonunu test etmemize yardımcı olur ve daha kapsamlı test coverage elde etmemizi sağlar. Test case'lerinin yeterli olduğunu düşünmemizin nedeni, tüm önemli senaryoların kapsandığından emin olmamızdır. Her bir test case, kodun farklı kısımlarını ve farklı senaryoları test etmeli ve bu sayede olası hataları tespit etmeli ve düzeltmeliyiz.
 
 Sonuç olarak, CDate struct'ını kullanan ComputeNextDate ve ComputePreviousDate fonksiyonları, tarih hesaplama işlemlerini doğru bir şekilde gerçekleştiren ve geçerli tarih aralıklarını kontrol eden kodlar olarak uygulanmalıdır. Test case'leri, fonksiyonların doğru çalıştığından ve çeşitli senaryolara uygun olduğundan emin olmak için kapsamlı ve çeşitlilik gösteren bir şekilde kurgulanmalıdır. Bu, kodun güvenilir ve sağlam bir şekilde çalışmasını sağlamak için önemlidir.
-
-´´´
