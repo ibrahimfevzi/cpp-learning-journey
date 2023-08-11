@@ -28,6 +28,7 @@ return false;
     return true;
 
 }
+
 ´´´
 
 IsLeapYear: Verilen yılın artık yıl olup olmadığını kontrol eden fonksiyon.
