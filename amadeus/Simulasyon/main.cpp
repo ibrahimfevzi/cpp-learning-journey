@@ -16,7 +16,7 @@ fıskiyelerin kordinatları, su ıslatma menzilleri, açıları, kaplumbağalar�
 
 kaplumbağaların ölüm anları, duvarlara çarptıkları anlar, ıslanma anları yazdırılacak, kaplumbağalar aynı anda birden fazla fıskiye tarafından ıslanabilir,, tümü yazdırılacak.
 
-
+online GDB ile çalıştırılabilir.
 
 
 */
