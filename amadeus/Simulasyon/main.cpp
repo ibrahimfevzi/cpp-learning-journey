@@ -32,11 +32,11 @@ const double PI = 3.14159265;
 class Fountain {
 public:
     double x, y;
-    double range1, range2;
+    double range;
     double angle;
 
-    Fountain(double x, double y, double range1, double range2, double angle)
-        : x(x), y(y), range1(range1), range2(range2), angle(angle) {}
+    Fountain(double x, double y, double range, double angle)
+        : x(x), y(y), range(range), angle(angle) {}
 };
 
 class Turtle {
@@ -50,34 +50,41 @@ public:
         : x(x), y(y), speed(speed), angle(angle), deathTime(-1) {}
 };
 
+class Garden {
+public:
+    double corner1_x, corner1_y;
+    double corner2_x, corner2_y;
+
+    Garden(double x1, double y1, double x2, double y2)
+        : corner1_x(x1), corner1_y(y1), corner2_x(x2), corner2_y(y2) {}
+};
+
 int main() {
     // Bahçe boyutları
-    const double gardenWidth = 100;
-    const double gardenHeight = 100;
-
+    Garden garden(0, 0, 100, 100);
+    // Fıskiye ve kablumbağa konumlarını  ve menzillerini kullanıcı tarafından girilmesi zaman aldığı için vektör olarak tuttuk.
     // Fıskiye ve kaplumbağa listeleri
     vector<Fountain> fountains = {
-        Fountain(30, 40, 0, 10, 0),
-        Fountain(70, 20, 10, 20, 45)
+        Fountain(30, 40, 10, 0),
+        Fountain(70, 20, 10, 45),
+        Fountain(60, 30, 10, 270),
+        Fountain(50, 10, 10, 90)
     };
 
     vector<Turtle> turtles = {
         Turtle(10, 80, 1, 30),
-        Turtle(90, 60, 0.8, 200)
+        Turtle(90, 60, 0.8, 200),
+        Turtle(60, 60, 0.8, 180),
+        Turtle(30, 60, 0.8, 90)
     };
 
     // Simülasyon adım aralığı ve süresi
     double timeStep = 0.1;
-    double simulationTime = 60.0;
+    double simulationTime = 18000.0;
 
     // Simülasyon döngüsü
     for (double currentTime = 0; currentTime < simulationTime; currentTime += timeStep) {
         for (Fountain &fountain : fountains) {
-            fountain.angle += timeStep * 10.0;
-            if (fountain.angle >= 360) {
-                fountain.angle -= 360;
-            }
-
             for (Turtle &turtle : turtles) {
                 if (turtle.deathTime != -1) {
                     continue; // Kaplumbağa ölmüşse devam et
@@ -91,15 +98,16 @@ int main() {
                     angleToTurtle += 360;
                 }
 
-                if (angleToTurtle >= fountain.range1 && angleToTurtle <= fountain.range2) {
+                if (angleToTurtle >= fountain.angle - fountain.range / 2 && angleToTurtle <= fountain.angle + fountain.range / 2) {
                     double distanceToTurtle = sqrt(pow(turtle.x - fountain.x, 2) + pow(turtle.y - fountain.y, 2));
 
-                    if (distanceToTurtle <= 1) { // Eğer 1 birim veya daha yakınındaysa
+                    if (distanceToTurtle <= fountain.range) { // Eğer menzil içerisine girerse
                         cout << "Turtle at (" << turtle.x << ", " << turtle.y << ") got wet by fountain at (" << fountain.x << ", " << fountain.y << ") at time " << currentTime << endl;
                     }
                 }
 
-                if (turtle.x <= 0 || turtle.x >= gardenWidth || turtle.y <= 0 || turtle.y >= gardenHeight) {
+                if (turtle.x <= garden.corner1_x || turtle.x >= garden.corner2_x ||
+                    turtle.y <= garden.corner1_y || turtle.y >= garden.corner2_y) {
                     cout << "Turtle at (" << turtle.x << ", " << turtle.y << ") hit a wall at time " << currentTime << endl;
                     turtle.deathTime = currentTime;
                 }
